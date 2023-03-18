@@ -1,0 +1,7 @@
+/.fleet
+/.idea
+/.vscode
+/node_modules
+auth.json
+npm-debug.log
+yarn-error.log

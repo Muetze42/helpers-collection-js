@@ -1,0 +1,22 @@
+{
+    "name": "@norman-huth/helpers-collection-js",
+    "version": "0.0.2",
+    "description": "Personal Javascript helpers.",
+    "keywords": [
+        "helpers",
+        "javascript"
+    ],
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Muetze42/helpers-collection-js"
+    },
+    "author": "Norman Huth",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Muetze42/helpers-collection-js/issues"
+    },
+    "homepage": "https://github.com/Muetze42/helpers-collection-js#readme"
+}
