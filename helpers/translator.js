@@ -7,7 +7,7 @@
  * @return string
  */
 export function __(key, replace = {}, translations = null) {
-    if (translations[key]) {
+    if (translations && translations[key]) {
         key = translations[key]
 
         Object.keys(replace).forEach(function (search) {
