@@ -1,6 +1,7 @@
 {
     "name": "@norman-huth/helpers-collection-js",
-    "version": "0.0.3",
+    "version": "0.0.4",
+    "private": false,
     "description": "Personal Javascript helpers.",
     "keywords": [
         "helpers",
