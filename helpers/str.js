@@ -1,5 +1,3 @@
-const KEBAB_REGEX = /[A-Z\u00C0-\u00D6\u00D8-\u00DE]/g;
-
 /**
  * Convert a value to camel case.
  *
@@ -110,6 +108,7 @@ export function strLimit(value, limit = 100, end = '...') {
  */
 export function strTrim(string, character = '\\s') {
     let regex = new RegExp('^' + character + '+|' + character + '+$', 'g')
+
     return string.replace(regex, '')
 }
 
@@ -122,6 +121,7 @@ export function strTrim(string, character = '\\s') {
  */
 export function strLtrim(string, character = '\\s') {
     let regex = new RegExp('^' + character + '*', 'g')
+
     return string.replace(regex, '')
 }
 
@@ -134,5 +134,6 @@ export function strLtrim(string, character = '\\s') {
  */
 export function strRtrim(string, character = '\\s') {
     let regex = new RegExp(character + '+$', 'g')
+
     return string.replace(regex, '')
 }
