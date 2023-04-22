@@ -7,3 +7,7 @@ Personal Javascript helpers.
 ```shell
 npm i @norman-huth/helpers-collection-js
 ```
+
+<!-- 
+npm publish --access=public
+-->
