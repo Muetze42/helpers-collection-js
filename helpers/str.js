@@ -137,3 +137,32 @@ export function strRtrim(string, character = '\\s') {
 
     return string.replace(regex, '')
 }
+
+/**
+ * Returns an array of strings, each of which is a substring of string formed by splitting it on boundaries
+ * formed by the string separator.
+ *
+ * @param separator
+ * @param string
+ * @param limit
+ * @return string[]
+ */
+export function explode(separator, string, limit = 2147483647) {
+    let parts = string.split(separator)
+    let array = []
+    let key = 0
+    limit = limit - 1
+
+    for (let i = 0; i < parts.length; i++) {
+        if (i > limit) {
+            array[key] = array[key] + parts[i]
+            continue
+        }
+        if (i === limit) {
+            key = i
+        }
+        array[i] = parts[i]
+    }
+
+    return array
+}
