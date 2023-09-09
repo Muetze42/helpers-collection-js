@@ -9,11 +9,11 @@
 export function __(key, replace = {}, translations = null) {
     if (translations && translations[key]) {
         key = translations[key]
-
-        Object.keys(replace).forEach(function (search) {
-            key = key.replace(':' + search, replace[search])
-        });
     }
+
+    Object.keys(replace).forEach(function (search) {
+        key = key.replace(':' + search, replace[search])
+    })
 
     return key
 }
