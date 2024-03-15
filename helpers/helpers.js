@@ -7,7 +7,6 @@
  * @param fallback
  */
 export function data_get(obj, path, fallback=null) {
-    // Source: https://stackoverflow.com/a/22129960
     let properties = Array.isArray(path) ? path : path.split('.');
     let value = properties.reduce((prev, curr) => {
         return prev && prev[curr];
@@ -17,7 +16,7 @@ export function data_get(obj, path, fallback=null) {
 }
 
 /**
- * Set an item on an array or object using dot notation.
+ * Set an item on an array or object using "dot" notation.
  *
  * @return string
  * @param obj
@@ -25,7 +24,6 @@ export function data_get(obj, path, fallback=null) {
  * @param value
  */
 export function data_set(obj, path, value) {
-    // Source: https://stackoverflow.com/a/20240290
     let parts = path.split('.');
     while (parts.length - 1) {
         let key = parts.shift();
@@ -42,17 +40,17 @@ export function data_set(obj, path, value) {
  * Outputs a message to the web console.
  *
  * @return string
- * @param args
  */
-export function dd(args) {
+export function dd(...args) {
     console.log(args);
 }
 
 /**
  * Convert the given url to a relative url.
  *
+ * @param {String} url
+ *
  * @return string
- * @param url
  */
 export function relative_url(url) {
     return url.replace(/^(?:\/\/|[^/]+)*\//, '/');
@@ -61,9 +59,37 @@ export function relative_url(url) {
 /**
  * Convert the given url to a tidy url.
  *
+ * @param {String} url
+ *
  * @return string
- * @param url
  */
 export function tidy_url(url) {
     return url.replace(/([^:])(\/\/+)/g, '$1/')
+}
+
+/**
+ * Finds whether the type of variable is float.
+ *
+ * @return Boolean
+ */
+export function is_float(n) {
+    return n === +n && n !== (n | 0)
+}
+
+/**
+ * Find whether the type of variable is integer
+ *
+ * @return Boolean
+ */
+export function is_integer(n) {
+    return n === +n && n === (n | 0)
+}
+
+/**
+ * Finds whether a variable is a number.
+ *
+ * @return Boolean
+ */
+export function is_numeric(n) {
+    return is_float(n) || is_integer(n)
 }
