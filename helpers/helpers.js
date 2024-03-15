@@ -93,3 +93,16 @@ export function is_integer(n) {
 export function is_numeric(n) {
     return is_float(n) || is_integer(n)
 }
+
+
+/**
+ * Provide access to optional objects.
+ *
+ * @param {String|Number} value
+ * @param {String|Number} defaultValue
+
+ * @return String|Number|null
+ */
+export function optional(value, defaultValue = null) {
+    return value ? value : defaultValue
+}
